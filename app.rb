@@ -10,6 +10,7 @@ end
 
 post "/turn" do
 	board = params[:board]
+	board = JSON.parse(board) 
 	game = Game.new(5,5)
 	game.load(board)
 	turn = game.turn
