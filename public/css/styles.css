@@ -14,5 +14,6 @@ body {
 
 #game button{
 
-	height: 25px;
+	height: 26px;
+	margin: 0px -2px;
 }
