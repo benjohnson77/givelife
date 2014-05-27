@@ -7,7 +7,7 @@ This is how I went about solving the CGOL.
 * ruby 
 * Sinatra
 * Rspec for testing
-* HAML -- don't have a preference for or against haml, just chose is to should versatility  
+* HAML -- don't have a preference for or against haml.  
 * jQuery -- I don't mind coffee script but didn't want to add it to Sinatra app. 
 
 ### Approach 
