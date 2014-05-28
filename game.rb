@@ -4,9 +4,8 @@
    # 4. Any dead cell with exactly three live neighbours becomes a live cell.
 
 class Game
-	class << self 
-		attr_accessor :board, :x, :y
-	end
+
+	attr_accessor :board, :x, :y
 
 	def initialize(x,y)		
 		@x = x
@@ -17,10 +16,6 @@ class Game
 	def load(presets)
 		@board = presets
 	end
-
-	def board
-		@board
-	end	
 
 	def turn
 		nb = new_board
