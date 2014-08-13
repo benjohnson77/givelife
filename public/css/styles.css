@@ -17,3 +17,12 @@ body {
 	height: 26px;
 	margin: 0px -2px;
 }
+#game .cell{
+	padding: 10px;
+	height: 70px;
+	width: 70px;
+	border: 1px solid #ccc;
+} 
+#game i{
+	font-size: 40px;
+} 	

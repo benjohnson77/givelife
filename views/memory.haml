@@ -1,7 +1,7 @@
 %html
 	%head
 		%meta{:charset => "utf-8"}
-		%title Conway's Game of Life
+		%title Memory Game
 		%meta{:name => "description", :content => ""}
 		%meta{:name => "author", :content => ""}
 
@@ -20,28 +20,14 @@
 
 		%script{ :type => "text/javascript", :src =>"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
 		%script{ :type => "text/javascript", :src =>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
-		%script{ :type => "text/javascript", :src =>"/js/app.js"}
+		%script{ :type => "text/javascript", :src =>"/js/memory.js"}
 
 	%body
-
-		%a{:href => "/memory", :class => "pull-right"}Also check out memory
-
-		%h1 Conway's Game of Life
+		%h1 Memory Game
 		
-		%div{:id => "game"}
-			- board.each_with_index do |row, y|
-				%div{:class => "row" }
-					%div{:class => "col-md-4", :id => "row#{y}" }
-						-row.each_with_index do |state,x| 
-							- if state == 1
-								- btn = "btn btn-success"
-							- else 
-								- btn = "btn btn-default"
-
-							%button{:id => "#{y}~#{x}~#{state}", :class => "#{btn}" }
-
-
-		%form{ :action => "/turn", :id => "form", :method => "post"}		
-			%input{:type => "hidden", :value => "#{board}", :name => "board"}
-			%input{:type => "submit", :value => "turn", :class => "button"}
-
+	%div{:id => "game"}
+		- 5.times.each do |i|
+			%div{:class => "row"}
+				- 5.times.each do |x|
+					%div{:class => "cell col-md-4", :id => "#{i}-#{x}"} 
+						%i{:class => "fa #{symbols.sample}"}

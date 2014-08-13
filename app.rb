@@ -16,3 +16,12 @@ post "/turn" do
 	turn = game.turn
 	haml :index, :locals => {:board => turn}
 end
+
+get "/memory" do
+	#board will be mod x mod and will be a square
+	symbols = ['fa-facebook-square','fa-fast-backward','fa-fast-forward','fa-female','fa-fighter-jet','fa-file','fa-file-o','fa-file-text','fa-file-text-o','fa-files-o','fa-film','fa-filter','fa-fire','fa-fire-extinguisher','fa-flag','fa-flag-checkered','fa-flag-o','fa-flask','fa-flickr','fa-floppy-o']
+	haml :memory, :locals => {:symbols => symbols, :mod => 5}	
+end 
+
+
+

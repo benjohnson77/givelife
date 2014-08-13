@@ -9,8 +9,7 @@ describe "Sinatra App" do
 
   it "should take a turn" do
 	post '/turn', {:board => "[[0, 1, 1], [0, 1, 1], [0, 0, 0]]"}.to_json  
-    last_response.body.should match(/Conway/) 
-    
+    last_response.body.should match(/Conway/)   
   end 
 
 end
