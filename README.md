@@ -6,13 +6,17 @@ This is how I went about solving the CGOL.
 
 * ruby 
 * Sinatra
-* Rspec for testing
-* HAML -- don't have a preference for or against haml.  
-* jQuery -- I don't mind coffee script but didn't want to add it to Sinatra app. 
+* Rspec
+* HAML
+* jQuery
 
 ### Approach 
 
 I really did this as an example of full stack dev. So I wanted to incorporate server side data/logic ie ruby class and JQuery/HAML for visualization. I tested with a 3x3 array to test my logic and wrote rspec tests with sample behavior covering logic. I chose sinatra for light weight web server without having to mess with full rails app. I chose haml just to use it. 
+
+Play the game here. 
+
+http://cgol-uber.herokuapp.com/
 
 ### TODO
 
