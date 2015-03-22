@@ -19,7 +19,26 @@ body {
 }
 .banner {
 	margin: 30px;
-	/*padding: 75px 0px;*/
-	font-size: 44px;
-	white-space: normal;
-}	
+}
+
+.share-button.sharer-0 {
+  -khtml-user-select:    none;
+  -moz-user-select:      none;
+  -ms-user-select:       none;
+  -webkit-touch-callout: none;
+  -webkit-user-select:   none;
+  user-select:           none;
+  width:600px !important;
+  height:50px !important;
+}
+
+.share-button.sharer-0 label {
+  -khtml-user-select:    none;
+  -moz-user-select:      none;
+  -ms-user-select:       none;
+  -webkit-touch-callout: none;
+  -webkit-user-select:   none;
+  user-select:           none;
+  padding:15px 200px !important;
+}
+

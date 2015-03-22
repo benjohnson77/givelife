@@ -36,7 +36,7 @@
 							%iframe{:src => 'https://www.youtube.com/embed/38Mlcg-ilI8', :frameborder => '0', :allowfullscreen => true}
 					%div{:class => "col-md-4"}
 						%div{:class => 'well'}
-							%div{:href => "#{state_registry_url}", :class => "btn btn-info", :target => "new"}Join the effort to save lives!
+							%a{:href => "#{state_registry_url}", :class => "btn btn-info", :target => "new"}Join the effort to save lives
 							%h3 Statistics
 							%p Currently, nearly 124,000 men, women and children are awaiting organ transplants in the United States. For specific numbers visit unos.org
 							%ul
@@ -46,6 +46,8 @@
 								%li 14,000 Organ Donors each year
 								%li More than 47,000 corneas were transplanted in 2014
 								%li More than 1 million tissue transplants are done each year
-				%div{:class => "row"}
-					%div{:href => "#{state_registry_url}", :class => "btn btn-info btn-xlarge col-md-5 banner", :target => "new"}Join the effort to save lives!
-					%div{:id => "share_button",:class => "btn btn-info btn-xlarge col-md-5 banner"}Encourage Others to Give the Gift of Life
+				%div{:class => "row-fluid"}
+					%a{:href => "#{state_registry_url}", :class => "btn btn-primary btn-lg col-md-5 banner", :target => "new"}Join the effort to save lives
+					%div{:class => "col-md-5 banner"}
+						%div{:class => "share-button sharer-0"}
+	
