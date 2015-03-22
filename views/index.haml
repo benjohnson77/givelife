@@ -1,7 +1,7 @@
 %html
 	%head
 		%meta{:charset => "utf-8"}
-		%title Conway's Game of Life
+		%title Give the Gift of Life
 		%meta{:name => "description", :content => ""}
 		%meta{:name => "author", :content => ""}
 
@@ -12,7 +12,7 @@
 			<![endif]-->
 
 		/ include bootstrap and font awesome
-		%link{:href=>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", :rel=>"stylesheet"}
+		%link{:href=>"//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/slate/bootstrap.min.css", :rel=>"stylesheet"}
 		%link{:href=>"//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel=>"stylesheet"}
 
 		/ add body padding styles
@@ -20,28 +20,32 @@
 
 		%script{ :type => "text/javascript", :src =>"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
 		%script{ :type => "text/javascript", :src =>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
+		%script{ :type => "text/javascript", :src =>"/js/share.min.js"}
 		%script{ :type => "text/javascript", :src =>"/js/app.js"}
 
 	%body
-
-		%a{:href => "/memory", :class => "pull-right"}Also check out memory
-
-		%h1 Conway's Game of Life
-		
-		%div{:id => "game"}
-			- board.each_with_index do |row, y|
-				%div{:class => "row" }
-					%div{:class => "col-md-4", :id => "row#{y}" }
-						-row.each_with_index do |state,x| 
-							- if state == 1
-								- btn = "btn btn-success"
-							- else 
-								- btn = "btn btn-default"
-
-							%button{:id => "#{y}~#{x}~#{state}", :class => "#{btn}" }
-
-
-		%form{ :action => "/turn", :id => "form", :method => "post"}		
-			%input{:type => "hidden", :value => "#{board}", :name => "board"}
-			%input{:type => "submit", :value => "turn", :class => "button"}
-
+		%div{:class => "container-fluid"}
+			%div{:class => "container"}
+				%div{:class => "row"}
+					%div{:class => "col-md-12"}
+						%h1 Save a life in :60 Seconds
+						%br 
+				%div{:class => "row"}
+					%div{:class => "col-md-8"}
+						%div{:class => 'embed-container'}
+							%iframe{:src => 'http://www.youtube.com/embed/38Mlcg-ilI8', :frameborder => '0', :allowfullscreen => true}
+					%div{:class => "col-md-4"}
+						%div{:class => 'well'}
+							%div{:href => "#{state_registry_url}", :class => "btn btn-info", :target => "new"}Join the effort to save lives!
+							%h3 Statistics
+							%p Currently, nearly 124,000 men, women and children are awaiting organ transplants in the United States. For specific numbers visit unos.org
+							%ul
+								%li 71,000 Multicultural Patients
+								%li 1,900 Pediatric Patients
+								%li 29,000 Organ Transplants Each Year
+								%li 14,000 Organ Donors each year
+								%li More than 47,000 corneas were transplanted in 2014
+								%li More than 1 million tissue transplants are done each year
+				%div{:class => "row"}
+					%div{:href => "#{state_registry_url}", :class => "btn btn-info btn-xlarge col-md-5 banner", :target => "new"}Join the effort to save lives!
+					%div{:id => "share_button",:class => "btn btn-info btn-xlarge col-md-5 banner"}Encourage Others to Give the Gift of Life

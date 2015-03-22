@@ -6,7 +6,6 @@ jQuery(document).ready(function($){
             $(this).children().hide();
         });
     }
-
     hide_em();
 
     var selected = "";
@@ -32,8 +31,5 @@ jQuery(document).ready(function($){
         } 
         console.log(selected);
         
-
     });
-
-
 });

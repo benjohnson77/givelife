@@ -2,27 +2,24 @@ body {
 	padding: 60px;
 }
 
-#game {
-	width: 500px;
-	height: 100px;
-}
-
-
-#game div{
-	padding:0px;
-}
-
-#game button{
-
-	height: 26px;
-	margin: 0px -2px;
-}
-#game .cell{
-	padding: 10px;
-	height: 70px;
-	width: 70px;
-	border: 1px solid #ccc;
+.embed-container { 
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%; 
 } 
-#game i{
-	font-size: 40px;
-} 	
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; 
+}
+.banner {
+	margin: 30px;
+	/*padding: 75px 0px;*/
+	font-size: 44px;
+	white-space: normal;
+}	
